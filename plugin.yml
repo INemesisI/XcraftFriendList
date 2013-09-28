@@ -1,0 +1,47 @@
+name: XcraftSocial
+version: 1.0.2
+author: INemesisI
+
+main: de.xcraft.INemesisI.Social.XcraftSocial
+load: POSTWORLD
+
+depend: [XcraftLibrary]
+
+commands:
+  social:
+    aliases: s
+  friend:
+    aliases: f
+  group:
+    aliases: g
+  gc:
+
+
+permissions:
+    XcraftSocial.Admin:
+        children:
+            XcraftSocial.Save: true
+            XcraftSocial.Reload: true
+            XcraftSocial.Friend.Add.exempt: true
+        default: op
+    XcraftSocial.Friend:
+        children:
+            XcraftSocial.Friend.Add: true
+            XcraftSocial.Friend.Remove: true
+            XcraftSocial.Friend.Accept: true
+            XcraftSocial.Friend.Decline: true
+            XcraftSocial.Friend.List: true
+        default: true
+    XcraftSocial.Group:
+        children:
+            XcraftSocial.Group.Add: true
+            XcraftSocial.Group.Chat: true
+            XcraftSocial.Group.Create: true
+            XcraftSocial.Group.Delete: true
+            XcraftSocial.Group.Info: true
+            XcraftSocial.Group.Kick: true
+            XcraftSocial.Group.Leave: true
+            XcraftSocial.Group.List: true
+            XcraftSocial.Group.Toggle: true
+        default: true
+            

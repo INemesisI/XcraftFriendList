@@ -6,6 +6,7 @@ import java.util.List;
 import org.bukkit.command.CommandSender;
 
 import de.xcraft.INemesisI.Library.Command.XcraftCommand;
+import de.xcraft.INemesisI.Library.Manager.XcraftCommandManager;
 import de.xcraft.INemesisI.Library.Manager.XcraftPluginManager;
 import de.xcraft.INemesisI.Social.Msg;
 import de.xcraft.INemesisI.Social.Msg.Replace;
@@ -14,8 +15,9 @@ import de.xcraft.INemesisI.Social.Manager.SocialPlayer;
 
 public class ListFriendsCommand extends XcraftCommand {
 
-	public ListFriendsCommand() {
-		super("friend", "list", "list|l|l.*", "[offline/online/pending/all]", Msg.COMMAND_FRIEND_LIST.toString(), "XcraftSocial.Friend.List");
+
+	public ListFriendsCommand(XcraftCommandManager cManager, String command, String name, String pattern, String usage, String desc, String permission) {
+		super(cManager, command, name, pattern, usage, desc, permission);
 	}
 
 	@Override

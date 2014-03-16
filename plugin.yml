@@ -1,6 +1,7 @@
 name: XcraftSocial
-version: 1.0.2
+version: 1.0.3
 author: INemesisI
+description: Requires XcraftLibrary v1.6.2
 
 main: de.xcraft.INemesisI.Social.XcraftSocial
 load: POSTWORLD
@@ -15,33 +16,35 @@ commands:
   group:
     aliases: g
   gc:
+  fl:
+  gl:
 
 
 permissions:
-    XcraftSocial.Admin:
+    xcraftsocial.admin:
         children:
-            XcraftSocial.Save: true
-            XcraftSocial.Reload: true
-            XcraftSocial.Friend.Add.exempt: true
+            xcraftsocial.save: true
+            xcraftsocial.reload: true
+            xcraftsocial.friend.add.exempt: true
         default: op
-    XcraftSocial.Friend:
+    xcraftsocial.friend:
         children:
-            XcraftSocial.Friend.Add: true
-            XcraftSocial.Friend.Remove: true
-            XcraftSocial.Friend.Accept: true
-            XcraftSocial.Friend.Decline: true
-            XcraftSocial.Friend.List: true
+            xcraftsocial.friend.add: true
+            xcraftsocial.friend.remove: true
+            xcraftsocial.friend.accept: true
+            xcraftsocial.friend.decline: true
+            xcraftsocial.friend.list: true
         default: true
-    XcraftSocial.Group:
+    xcraftsocial.group:
         children:
-            XcraftSocial.Group.Add: true
-            XcraftSocial.Group.Chat: true
-            XcraftSocial.Group.Create: true
-            XcraftSocial.Group.Delete: true
-            XcraftSocial.Group.Info: true
-            XcraftSocial.Group.Kick: true
-            XcraftSocial.Group.Leave: true
-            XcraftSocial.Group.List: true
-            XcraftSocial.Group.Toggle: true
+            xcraftsocial.group.add: true
+            xcraftsocial.group.chat: true
+            xcraftsocial.group.create: true
+            xcraftsocial.group.delete: true
+            xcraftsocial.group.info: true
+            xcraftsocial.group.kick: true
+            xcraftsocial.group.leave: true
+            xcraftsocial.group.list: true
+            xcraftsocial.group.toggle: true
         default: true
             

@@ -4,6 +4,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import de.xcraft.INemesisI.Library.Command.XcraftCommand;
+import de.xcraft.INemesisI.Library.Manager.XcraftCommandManager;
 import de.xcraft.INemesisI.Library.Manager.XcraftPluginManager;
 import de.xcraft.INemesisI.Social.Msg;
 import de.xcraft.INemesisI.Social.Msg.Replace;
@@ -13,9 +14,10 @@ import de.xcraft.INemesisI.Social.Manager.SocialPlayer;
 
 public class DeclineFriendCommand extends XcraftCommand {
 
-	public DeclineFriendCommand() {
-		super("friend", "decline", "decline|d|d.*", "<PLAYER>", Msg.COMMAND_FRIEND_DECLINE
-				.toString(), "XcraftSocial.Friend.Decline");
+
+
+	public DeclineFriendCommand(XcraftCommandManager cManager, String command, String name, String pattern, String usage, String desc, String permission) {
+		super(cManager, command, name, pattern, usage, desc, permission);
 	}
 
 	@Override

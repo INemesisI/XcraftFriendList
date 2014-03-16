@@ -4,18 +4,21 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import de.xcraft.INemesisI.Library.Command.XcraftCommand;
+import de.xcraft.INemesisI.Library.Manager.XcraftCommandManager;
 import de.xcraft.INemesisI.Library.Manager.XcraftPluginManager;
 import de.xcraft.INemesisI.Social.Msg;
 import de.xcraft.INemesisI.Social.Msg.Replace;
-import de.xcraft.INemesisI.Social.Manager.SocialPlayer;
 import de.xcraft.INemesisI.Social.Manager.SocialManager;
+import de.xcraft.INemesisI.Social.Manager.SocialPlayer;
 
 public class AddFriendCommand extends XcraftCommand {
 
-	public AddFriendCommand() {
-		super("friend", "add", "add|a|ad.*", "<PLAYER>", Msg.COMMAND_FRIEND_ADD.toString(), "XcraftSocial.Friend.Add");
-	}
 	
+
+	public AddFriendCommand(XcraftCommandManager cManager, String command, String name, String pattern, String usage, String desc, String permission) {
+		super(cManager, command, name, pattern, usage, desc, permission);
+	}
+
 	@Override
 	public boolean execute(XcraftPluginManager manager, CommandSender sender, String[] args) {
 		SocialManager sManager = (SocialManager) manager;
